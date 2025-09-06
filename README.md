@@ -1,69 +1,51 @@
-Website Institucional - InfoTech Solutions
-1. Sobre o Projeto
-Este projeto consiste na criação de um website institucional para a empresa fictícia InfoTech Solutions. O seu principal objetivo é servir como um trabalho prático para demonstrar a aplicação dos três pilares fundamentais da Segurança da Informação: Integridade, Confidencialidade e Disponibilidade (CID) num ambiente web real.
+# Website Institucional - InfoTech Solutions
 
-O site foi desenvolvido para ser moderno e responsivo, incluindo funcionalidades como um seletor de tema claro/escuro e transições suaves, mas o seu foco principal é a implementação e simulação de conceitos de segurança.
+![Badge de Segurança](https://img.shields.io/badge/Segurança-Tríade%20CID-brightgreen)
+![Badge de Tecnologia](https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue)
 
-2. Tecnologias Utilizadas
-O projeto foi construído utilizando tecnologias web padrão, sem a necessidade de frameworks complexos, para focar nos conceitos fundamentais.
+---
 
-HTML5: Para a estruturação semântica do conteúdo.
+## 🚀 Sobre o Projeto
 
-CSS3: Para a estilização, layout responsivo e animações.
+Este projeto demonstra a aplicação prática dos pilares da **Segurança da Informação (Integridade, Confidencialidade e Disponibilidade)** no desenvolvimento de um website institucional moderno e responsivo.
 
-JavaScript (Vanilla): Para a interatividade, como o menu móvel, o seletor de tema e a simulação de segurança no formulário.
+| Detalhe           | Descrição                                                                                                    |
+| ----------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Empresa Fictícia** | InfoTech Solutions - Consultoria em Segurança Digital                                                        |
+| **Objetivo** | Servir como um trabalho prático sobre a Tríade CID em um ambiente web real.                                     |
+| **Tecnologias** | HTML5, CSS3, JavaScript (Vanilla)                                                                            |
 
-3. Demonstração dos Pilares de Segurança
-Cada pilar da Tríade CID foi abordado através de uma implementação ou simulação específica no site.
+---
 
-🛡️ 3.1 Integridade
-A integridade foi garantida através da implementação de uma Política de Segurança de Conteúdo (Content Security Policy - CSP).
+## 🛡️ Pilares de Segurança Implementados
 
-O quê? Uma meta tag CSP foi adicionada ao <head> de todas as páginas.
+### Integridade
+> Garantida através de uma **Política de Segurança de Conteúdo (Content Security Policy - CSP)**, que previne a injeção de código malicioso (XSS) ao definir fontes confiáveis para todos os recursos da página.
 
-Como? A política define uma "lista de permissões" de fontes confiáveis a partir das quais o navegador pode carregar recursos (scripts, estilos, fontes, imagens).
+### Confidencialidade
+> Simulada no formulário de contato, onde os dados do usuário são codificados em **Base64** (representando a criptografia) antes de serem "enviados", conforme demonstrado no console do navegador.
 
-Porquê? Isso previne ataques de injeção de código, como Cross-Site Scripting (XSS), garantindo que o conteúdo exibido ao utilizador não seja modificado por terceiros mal-intencionados.
+### Disponibilidade
+> Abordada conceitualmente no relatório do projeto, descrevendo uma **estratégia de infraestrutura robusta** com Hospedagem em Nuvem, CDN para proteção DDoS e uma rotina de Backups e Monitoramento 24/7.
 
-🔒 3.2 Confidencialidade
-A confidencialidade foi simulada no formulário da página de contato para demonstrar a proteção de dados sensíveis.
+---
 
-O quê? Uma simulação de criptografia de ponta a ponta.
+## 🔗 Links Importantes
 
-Como? Ao submeter o formulário, o JavaScript exibe uma mensagem de "a encriptar dados..." e, no console do navegador, os dados do formulário são codificados em Base64.
+| Recurso             | Link                                                                                                             |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **📄 Relatório Completo** | **[Aceder ao Documento](https://docs.google.com/document/d/1z5FDqO4wAHdeqvoHpFmi8Te_Nwapx-2p306y0_hA778/edit?usp=sharing)** |
+| **💻 Site ao Vivo** | **[Ver o Projeto no GitHub Pages](https://jppalves.github.io/projeto-seguranca-infotech/)** |
 
-Porquê? A codificação em Base64 representa visualmente que os dados não são enviados em texto plano, simulando como a encriptação os tornaria ilegíveis para qualquer pessoa que intercetasse a comunicação.
+---
 
-☁️ 3.3 Disponibilidade
-A disponibilidade foi abordada de forma conceitual, descrevendo a infraestrutura ideal para garantir que o site permaneça sempre online.
+## 📂 Acesso ao Código-Fonte
 
-O quê? Uma estratégia de hospedagem resiliente e distribuída.
+Para clonar e explorar o projeto localmente:
 
-Como? No relatório do projeto, detalhamos o uso de:
-
-Hospedagem em Nuvem com CDN (Content Delivery Network): Para distribuir o site globalmente e garantir que não haja um ponto único de falha.
-
-Proteção contra Ataques DDoS: Utilizando serviços como a Cloudflare para filtrar tráfego malicioso.
-
-Monitorização 24/7 e Backups Diários: Para uma resposta rápida a incidentes e recuperação de desastres.
-
-Porquê? Para demonstrar que a disponibilidade vai além do servidor e envolve uma estratégia proativa contra falhas e ataques.
-
-4. Relatório Completo
-Para uma análise aprofundada de todas as medidas de segurança implementadas e das estratégias consideradas, consulte o relatório completo do projeto.
-
-Clique aqui para aceder ao Relatório do Projeto
-
-5. Acesso e Visualização do Projeto
-Visualização Online (GitHub Pages)
-O projeto está publicado e pode ser acedido através do link abaixo.
-
-Link para o site: https://jppalves.github.io/projeto-seguranca-infotech/
-
-Acesso ao Código-Fonte
-Para clonar e visualizar o código-fonte localmente:
-
+```bash
 # Clone este repositório
 git clone [https://github.com/JPPAlves/projeto-seguranca-infotech.git](https://github.com/JPPAlves/projeto-seguranca-infotech.git)
 
-# Navegue até à pasta do projeto e explore os ficheiros
+# Navegue até à pasta do projeto
+cd projeto-seguranca-infotech
