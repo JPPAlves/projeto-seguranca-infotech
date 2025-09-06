@@ -52,18 +52,18 @@ Porquê? Para demonstrar que a disponibilidade vai além do servidor e envolve u
 4. Relatório Completo
 Para uma análise aprofundada de todas as medidas de segurança implementadas e das estratégias consideradas, consulte o relatório completo do projeto.
 
-[Clique aqui para aceder ao Relatório do Projeto](COLE O LINK PARA O SEU RELATÓRIO AQUI)
+Clique aqui para aceder ao Relatório do Projeto
 
 5. Acesso e Visualização do Projeto
 Visualização Online (GitHub Pages)
-O projeto está publicado e pode ser acedido através do link abaixo. Substitua seu-usuario e nome-do-repositorio pelos seus dados.
+O projeto está publicado e pode ser acedido através do link abaixo.
 
-Link para o site: https://seu-usuario.github.io/nome-do-repositorio/
+Link para o site: https://jppalves.github.io/projeto-seguranca-infotech/
 
 Acesso ao Código-Fonte
 Para clonar e visualizar o código-fonte localmente:
 
-# Clone este repositório (substitua com o nome que escolheu)
-git clone [https://github.com/seu-usuario/projeto-seguranca-infotech.git](https://github.com/seu-usuario/projeto-seguranca-infotech.git)
+# Clone este repositório
+git clone [https://github.com/JPPAlves/projeto-seguranca-infotech.git](https://github.com/JPPAlves/projeto-seguranca-infotech.git)
 
 # Navegue até à pasta do projeto e explore os ficheiros
