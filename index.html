@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- SIMULAÇÃO DE INTEGRIDADE: Política de Segurança de Conteúdo (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 
+    'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+    img-src 'self' https://placehold.co;">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InfoTech Solutions: Maximize sua segurança com soluções completas em desenvolvimento de software e consultoria digital.">
+    <title>InfoTech Solutions - Segurança e Inovação Digital</title>
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="transition-fade">
+
+    <header class="header">
+        <nav class="navbar container" role="navigation" aria-label="Navegação principal">
+            <a href="index.html" class="logo" aria-label="Página inicial da InfoTech">
+                <i class="fa-solid fa-shield-halved"></i> INFOTECH
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="pages/services.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-switcher">
+                    <span>Tema</span> <input type="checkbox" id="theme-toggle" aria-label="Alternar entre modo claro e escuro">
+                    <label for="theme-toggle"></label>
+                </div>
+                <div class="hamburger" aria-label="Abrir menu" role="button" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="hero-section container">
+            <div class="hero-text">
+                <h1 class="hero-title">Segurança Digital e Inovação para o Futuro do seu Negócio</h1>
+                <p class="hero-subtitle">
+                    Desenvolvemos softwares robustos e oferecemos consultoria de ponta para garantir a integridade, confidencialidade e disponibilidade dos seus dados.
+                </p>
+                <a href="pages/services.html" class="btn btn-primary">
+                    Explore Nossas Soluções <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/500x500/38B2AC/E2E8F0?text=InfoTech\nSecure" alt="Ilustração de segurança digital com um escudo e códigos.">
+            </div>
+        </section>
+
+        <section class="page-section why-us-section">
+            <div class="container">
+                <h2 class="section-title">Por que a InfoTech?</h2>
+                <div class="why-us-grid">
+                    <div class="why-us-card reveal">
+                        <div class="why-us-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <h3>Especialistas em Segurança</h3>
+                        <p>A nossa equipa é composta por profissionais certificados e experientes em cibersegurança.</p>
+                    </div>
+                    <div class="why-us-card reveal">
+                        <div class="why-us-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3>Soluções Sob Medida</h3>
+                        <p>Analisamos as suas necessidades para criar soluções que se encaixam perfeitamente no seu negócio.</p>
+                    </div>
+                    <div class="why-us-card reveal">
+                        <div class="why-us-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h3>Suporte Contínuo</h3>
+                        <p>Oferecemos suporte dedicado para garantir que as suas operações nunca parem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="page-section testimonials-section">
+            <div class="container reveal">
+                <h2 class="section-title">O que os Nossos Clientes Dizem</h2>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"A InfoTech transformou a nossa segurança digital. Sentimo-nos muito mais protegidos e a equipa de suporte é fantástica. Recomendo vivamente!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/60x60/38B2AC/E2E8F0?text=J" alt="Foto de Joana Silva">
+                        <div>
+                            <h4>Joana Silva</h4>
+                            <span>CEO, Tech Inova</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-content reveal">
+                <h2>Pronto para elevar a sua segurança digital?</h2>
+                <p>Vamos conversar sobre como podemos proteger e impulsionar o seu negócio.</p>
+                <a href="pages/contact.html" class="btn btn-primary">Fale com um Especialista</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Página inicial da InfoTech">
+                <i class="fa-solid fa-shield-halved"></i> INFOTECH
+            </a>
+            <p>&copy; 2024 InfoTech Solutions. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
+

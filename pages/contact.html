@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a InfoTech Solutions...">
+    <title>InfoTech Solutions - Contato</title>
+
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="transition-fade">
+
+    <header class="header">
+        <nav class="navbar container" role="navigation" aria-label="Navegação principal">
+            <a href="../index.html" class="logo" aria-label="Página inicial da InfoTech">
+                <i class="fa-solid fa-shield-halved"></i> INFOTECH
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contato</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-switcher">
+                    <span>Tema</span>
+                    <input type="checkbox" id="theme-toggle" aria-label="Alternar entre modo claro e escuro">
+                    <label for="theme-toggle"></label>
+                </div>
+                <div class="hamburger" aria-label="Abrir menu" role="button" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="page-section contact-page">
+            <div class="container">
+                
+                <div class="card">
+                    <div class="contact-grid">
+                        <form id="contact-form">
+                            <h1 class="section-title" style="margin-bottom: 30px; text-align: left;">Entre em Contato</h1>
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </form>
+                        <div class="contact-info">
+                            <h3>Nossos Canais</h3>
+                            <p><i class="fas fa-envelope"></i> contato@infotech.fict</p>
+                            <p><i class="fas fa-phone"></i> (XX) 99999-8888</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Av. da Tecnologia, 123, Cidade Digital</p>
+                            <div class="security-notice">
+                                <p><i class="fa-solid fa-lock"></i> <strong>Seus dados estão seguros conosco.</strong></p>
+                                <p class="confidentiality-info">Todas as informações enviadas são criptografadas de ponta a ponta para garantir sua confidencialidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="feedback-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" role="button" aria-label="Fechar modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="modal-title">Mensagem Enviada!</h3>
+            <p id="modal-message">Obrigado por entrar em contato. Responderemos em breve!</p>
+        </div>
+    </div>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

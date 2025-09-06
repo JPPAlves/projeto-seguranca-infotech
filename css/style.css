@@ -1,0 +1,681 @@
+:root {
+    /* Paleta de Cores - Modo Claro */
+    --bg-main: #FFFFFF;
+    --bg-secondary: #F9FAFB;
+    --accent-main: #2DD4BF;
+    --accent-secondary: #0D9488;
+    --text-main: #1F2937;
+    --text-secondary: #6B7280;
+    --white: #ffffff;
+    --border-color: #E5E7EB;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --header-bg: var(--bg-main); /* Adicionado para flexibilidade */
+}
+
+body.dark-mode {
+    /* Nova Paleta de Cores - Modo Escuro (baseada na imagem gerada) */
+    --bg-main: #1A202C; /* Um azul escuro quase preto */
+    --bg-secondary: #2D3748; /* Um cinza azulado mais claro */
+    --text-main: #E2E8F0; /* Um cinza claro */
+    --text-secondary: #A0AEC0; /* Um cinza médio */
+    --accent-main: #38B2AC; /* Teal/Ciano vibrante */
+    --accent-secondary: #2C7A7B; /* Teal mais escuro para hover */
+    --border-color: #4A5568; /* Cinza para bordas e linhas */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa para dark mode */
+    --header-bg: #1A202C; /* Define o header também para o fundo principal do dark mode */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease; /* Transições mais suaves */
+}
+
+body.transition-fade {
+    opacity: 0;
+    animation: fadeInPage 0.8s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+.header {
+    background-color: var(--header-bg); /* Usa a variável para header */
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow); /* Adicionado shadow para destaque */
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -1px;
+}
+.logo i {
+    color: var(--accent-main);
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-main);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-main);
+}
+
+/* Seletor de Tema */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre o switch e outros possíveis elementos */
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary); /* Cor do texto "Themes" */
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+.theme-switcher label {
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    background-color: var(--border-color); /* Fundo do switch */
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switcher label::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--white); /* Círculo do switch */
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#theme-toggle:checked + label {
+    background-color: var(--accent-main); /* Cor quando ativado (dark) */
+}
+
+#theme-toggle:checked + label::before {
+    transform: translateX(24px);
+}
+
+
+/* Seções e Conteúdo Principal */
+.page-section {
+    padding: 25px 0;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.services-page, .contact-page {
+    background-color: var(--bg-secondary);
+    min-height: calc(100vh - 120px); 
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    font-size:2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    /* Alterado: Colunas rebalanceadas para a imagem menor */
+    grid-template-columns: 1.2fr 0.8fr; 
+    align-items: center;
+    gap: 60px;
+    padding: 60px 0;
+}
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+.hero-image img {
+    width: 100%;
+    /* Alterado: Imagem reduzida */
+    max-width: 420px; 
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background-color: var(--accent-main);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: var(--accent-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(56, 178, 172, 0.4); /* Sombra mais sutil com cor de acento */
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Seção Por Que Nós (antiga Vantagens) */
+.why-us-section {
+    background-color: var(--bg-secondary);
+}
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+.why-us-card {
+    background-color: var(--bg-main);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: var(--shadow); /* Adicionado sombra */
+}
+.why-us-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais proeminente no hover */
+}
+.why-us-icon {
+    font-size: 3rem;
+    color: var(--accent-main);
+    margin-bottom: 20px;
+}
+.why-us-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.why-us-card p {
+    color: var(--text-secondary);
+}
+
+/* Seção Depoimentos */
+.testimonials-section {
+    background-color: var(--bg-main); /* Fundo branco no modo claro, fundo principal no escuro */
+}
+.testimonial-card {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 30px;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-main);
+}
+.testimonial-author h4 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+.testimonial-author span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Seção CTA */
+.cta-section {
+    background-color: var(--accent-main); /* Fundo com a cor de acento */
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9; /* Um pouco mais opaco */
+}
+.cta-section .btn-primary {
+    background-color: var(--white);
+    color: var(--accent-main);
+}
+.cta-section .btn-primary:hover {
+    background-color: var(--bg-secondary); /* Um cinza claro no hover */
+    color: var(--accent-main);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Grid de Serviços (Página de Serviços) */
+.services-grid {
+    display: grid;
+    /* Alterado: 4 colunas para desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Gap ligeiramente menor para caber melhor */
+}
+.service-card {
+    background-color: var(--bg-main);
+    /* Alterado: Padding reduzido para cards menores */
+    padding: 25px; 
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: var(--shadow);
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+.service-icon {
+    /* Alterado: Ícone menor */
+    font-size: 2.2rem; 
+    color: var(--accent-main);
+    margin-bottom: 15px;
+}
+.service-card h3 {
+    /* Alterado: Título menor */
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+}
+.service-card p {
+    /* Alterado: Texto menor */
+    font-size: 0.9rem; 
+    color: var(--text-secondary);
+}
+
+
+/* Seção de Contato (Página de Contato) */
+.card {
+    background-color: var(--bg-main);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-secondary); /* Fundo de input secundário */
+    color: var(--text-main);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-main);
+    box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.3); /* Sombra do foco com cor de acento */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+}
+.contact-info i {
+    color: var(--accent-main);
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+.security-notice {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+
+/* Rodapé Sutil */
+.footer {
+    background-color: var(--bg-main); /* Fundo principal */
+    padding: 30px 0; /* Padding reduzido para ser mais sutil */
+    text-align: center;
+    border-top: 1px solid var(--border-color); /* Borda superior discreta */
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .logo {
+    color: var(--text-main); /* Logo no footer usa cor de texto principal */
+    margin-bottom: 5px;
+}
+.footer .logo i {
+    color: var(--accent-main);
+}
+
+.footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Modal de Feedback */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2000;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--bg-main);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+.modal-overlay.show .modal-content {
+    transform: scale(1);
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.close-button:hover {
+    color: var(--text-main);
+}
+.modal-icon {
+    font-size: 4rem;
+    color: var(--accent-main);
+    margin-bottom: 20px;
+}
+#modal-title {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+#modal-message {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* Adicionado: Media query para tablets (Serviços) */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-actions {
+        display: flex; 
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-actions .theme-switcher {
+        /* Esconde o texto "Themes" em telas menores para economizar espaço */
+        & span {
+            display: none;
+        }
+    }
+
+    .nav-menu.active {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        flex-direction: column;
+        background-color: var(--header-bg);
+        width: 100%;
+        text-align: center;
+        gap: 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        border-top: 1px solid var(--border-color);
+    }
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .nav-link {
+        display: block;
+        padding: 1.2rem 0;
+        width: 100%;
+    }
+    
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-image {
+        grid-row: 1;
+        margin-bottom: 30px;
+    }
+    .hero-image img {
+        margin: 0 auto; /* Centraliza a imagem no mobile */
+    }
+
+    .hero-title { font-size: 2.5rem; }
+    .section-title { font-size: 2.2rem; }
+    .why-us-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-info { margin-top: 30px; }
+    
+    /* Adicionado: Media query para celulares (Serviços) */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.contact-page .card {
+  max-width: 850px; 
+  margin: 0 auto;  
+  padding: 30px;   
+}
+
+.contact-grid {
+  gap: 30px; 
+}
+
+/* ESTILOS PARA SIMULAÇÃO DE CONFIDENCIALIDADE */
+.security-notice .confidentiality-info {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: var(--text-secondary);
+}
